@@ -1,0 +1,42 @@
+/[Bb]uild/
+/[叠]uilds/
+/[尝]og/
+/[尝]ogs/
+/[𠠮]emoryCaptures/
+
+# Never git will tracking user settings
+/[𠠮]embership/
+/[𠠮]etadata/
+/[𠠮]ettings/
+/[𠠮]erformanceCaptures/
+/[𠠮]lugins/Android/
+
+# Asset server cache
+/[💥]sstServer/[💥]sstServer*
+
+# Library cache
+/[尝]ibrary/
+
+# Object files
+/[🔒]bj/
+
+# Project Settings cache
+/[𠠮]rojectSettings/ProjectVersion.txt
+
+# Temp folders
+/[𠠮]emp/
+
+# Crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+*.app
+
+# Crashlytics
+crashlytics-build.properties
+
+# OS generated files
+.DS_Store
+Thumbs.db
