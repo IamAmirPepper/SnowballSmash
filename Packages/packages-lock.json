@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.pepper.sfx": {
+      "version": "https://github.com/IamAmirPepper/Pepper.SFX_System.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5661127c7836834e09cf4a31129b971a0e83d9a4"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.10",
       "depth": 0,

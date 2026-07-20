@@ -768,6 +768,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1812921951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &839431462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839431463}
+  - component: {fileID: 839431464}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &839431463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839431462}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46228057, y: 2.5060835, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839431464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839431462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 162331359, guid: 185cca1de5fe9184da36f5ffa2232159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterBus: {fileID: 11400000, guid: 92f3bb037838c174ebac3bd4846598d7, type: 2}
+  buses: []
+  masterMixerGroup: {fileID: 24300002, guid: 313005b969533a843969544af0df1017, type: 2}
+  masterVolume: 1
+  muteAll: 0
+  maxRealVoices: 32
+  maxVirtualVoices: 64
+  voiceUpdateInterval: 0.1
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  occlusionUpdateInterval: 0.2
+  occlusionRayCount: 3
+  occlusionRaySpreadMeters: 0.5
+  useBatchedOcclusionRaycasts: 1
+  occlusionMaxHitsPerRay: 4
+  occlusionGainSmoothingSeconds: 0.06
+  occlusionCutoffSmoothingSeconds: 0.04
+  enableLOD: 1
+  lodDistances:
+  - 10
+  - 25
+  - 50
+  - 100
+  voiceMixer: {fileID: 24100000, guid: 313005b969533a843969544af0df1017, type: 2}
+  occlusionLayout: {fileID: 0}
+  defaultOcclusionSlotsPerBus: 6
+  reverbSendBusRegistry: {fileID: 0}
+  reverbSendsUpdateInterval: 0.05
+  warnOnActiveVoiceDestroyed: 1
 --- !u!1 &920362212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,3 +1577,4 @@ SceneRoots:
   - {fileID: 1056315778}
   - {fileID: 1380370232}
   - {fileID: 1812921951}
+  - {fileID: 839431463}
