@@ -1,3 +1,4 @@
+using SnowballSmash.Events;
 using UnityEngine;
 
 namespace SnowballSmash.Gameplay
@@ -6,6 +7,7 @@ namespace SnowballSmash.Gameplay
     {
 
         [SerializeField] private float distanceThreshold = 2f;
+        [SerializeField] private SnowballCollisionEvents collisionEvents;
 
         private Collider2D _myCollider;
         private SpriteRenderer _myRenderer;
@@ -30,21 +32,21 @@ namespace SnowballSmash.Gameplay
                 {
                     if(collision.TryGetComponent<Target>(out Target target))
                     {
-                        Debug.Log("hit target");
-                        //invoke hit target
+                        //Debug.Log("hit target");
+                        collisionEvents.RaiseOnCollectHit();
                     }
                     else if(collision.TryGetComponent<Obstacle>(out Obstacle obstacle))
                     {
-                        //invoke hit obstacle
-                        Debug.Log("hit obstacle");
+                        //Debug.Log("hit obstacle");
+                        collisionEvents.RaiseOnObstacleHit();
                     }
                 }
 
 
                 if (distance > distanceThreshold)
                 {
-                    //invoke near miss
-                    Debug.Log("NEAR MISS!");
+                    //Debug.Log("NEAR MISS!");
+                    collisionEvents.RaiseOnNearMiss();
                 }
             }
         }
