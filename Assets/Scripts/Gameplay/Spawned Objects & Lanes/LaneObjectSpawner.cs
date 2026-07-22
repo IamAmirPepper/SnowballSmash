@@ -26,6 +26,9 @@ namespace SnowballSmash.Gameplay
         [Header("Travel")]
         [Tooltip("ScriptableObject that defines speed, scale, and despawn tuning for spawned objects.")]
         [SerializeField] private ObjectTravelSettings travelSettings;
+        [Tooltip("Optional shared progress data whose speed multiplier scales this spawner's travel speed as distance increases. Assign the same asset used by ScoreManager (and by any other lane spawner) so they all ramp together.")]
+        [SerializeField] private GameProgressData gameProgress;
+
 
         [Header("Fade")]
         [Tooltip("Whether spawned SpriteRenderers should fade in as they travel toward the camera.")]
@@ -231,6 +234,11 @@ namespace SnowballSmash.Gameplay
 
                 float progress = pooledObject.GetTravelProgress(objectTransform.position);
                 float travelSpeed = travelSettings.GetSpeed(progress);
+
+                if (gameProgress != null)
+                {
+                    travelSpeed *= gameProgress.SpeedMultiplier;
+                }
 
                 objectTransform.position = Vector3.MoveTowards(
                     objectTransform.position,
