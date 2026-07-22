@@ -1101,6 +1101,10 @@ MonoBehaviour:
     targetPoint: {fileID: 1429873205}
     spawnIntervalMin: 1
     spawnIntervalMax: 3
+  - spawnPoint: {fileID: 1984542716}
+    targetPoint: {fileID: 1429873203}
+    spawnIntervalMin: 1
+    spawnIntervalMax: 3
   prefabPool:
   - {fileID: 56956213014138982, guid: 8f52c98edfb64d74584862de582fb464, type: 3}
   - {fileID: 56956213014138982, guid: aa20779f3f6eb7047bae4fecc24a23c7, type: 3}
@@ -1449,7 +1453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429873201}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Left_Target
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1480,7 +1484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429873203}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Middle_Target
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1511,7 +1515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429873205}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Right_Target
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
