@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1580357544, guid: 185cca1de5fe9184da36f5ffa2232159, type: 3}
+  m_Name: Play_AMB_Snow
+  m_EditorClassIdentifier: 
+  eventName: Play_AMB_Snow
+  actions:
+  - type: 0
+    container: {fileID: 11400000, guid: dff924a667d00cb4f8f6b9c3b18f4502, type: 2}
+    targetBus: {fileID: 11400000, guid: 9c9db18a01a76d34eaf9913b0cfe3298, type: 2}
+    delay: 0
+    fadeDuration: 0
+    fadeCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    switchGroup: 
+    switchValue: 
+    rtpcName: 
+    rtpcValue: 0
+    stateName: 
+    fadeFromContainer: {fileID: 0}
+    crossfadeType: 1
+  assetGuid: b5a35959c67543e45b59f2334042ac84
+  priority: 64
+  maxInstances: 0
+  stealBehavior: 0
+  cooldown: 0
+  networkUnreliable: 0
+  independentVariationDefault: 0
+  networkLoopSyncTier: 0

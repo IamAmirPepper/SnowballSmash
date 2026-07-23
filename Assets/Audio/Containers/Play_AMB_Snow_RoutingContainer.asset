@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1146682895, guid: 185cca1de5fe9184da36f5ffa2232159, type: 3}
+  m_Name: Play_AMB_Snow_RoutingContainer
+  m_EditorClassIdentifier: 
+  containerName: Play_AMB_Snow_RoutingContainer
+  description: 
+  tags: []
+  mixerGroup: {fileID: 7881078307287774112, guid: 313005b969533a843969544af0df1017, type: 2}
+  useOcclusion: 0
+  allowReverbSend: 0
+  reverbSendLevelDb: 0
+  staticEmitter: 0
+  explicitReverbBus: {fileID: 0}
+  usePropagation: 0
+  enableVolumeRandomization: 1
+  volumeRandomMin: -1
+  volumeRandomMax: 1
+  enablePitchRandomization: 1
+  pitchRandomMin: -25
+  pitchRandomMax: 25
+  is3D: 0
+  minDistance: 1
+  maxDistance: 10
+  rolloffMode: 0
+  entries:
+  - clip: {fileID: 8300000, guid: 51c5c66628d10834eb22ec374022f8ae, type: 3}
+    address: 
+  legacyAudioClips: []
+  volume: 1
+  loop: 1

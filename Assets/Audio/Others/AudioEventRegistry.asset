@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1274371838, guid: 185cca1de5fe9184da36f5ffa2232159, type: 3}
+  m_Name: AudioEventRegistry
+  m_EditorClassIdentifier: 
+  autoLoadFromResources: 1
+  audioEvents:
+  - {fileID: 11400000, guid: b5a35959c67543e45b59f2334042ac84, type: 2}
+  - {fileID: 11400000, guid: baf860a7cfba3674d9f6e6d34e5dc04c, type: 2}
+  - {fileID: 11400000, guid: 73760d7a64337dc45bbb74881982b0e1, type: 2}
+  - {fileID: 11400000, guid: 7fd0968b2cd05c74d979e8149cd9bf75, type: 2}
+  - {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
+  - {fileID: 11400000, guid: 58da89668080c8b4b850e9b39700f91d, type: 2}
+  audioStates: []

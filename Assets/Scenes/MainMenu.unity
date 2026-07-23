@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 250870451}
   - component: {fileID: 250870450}
   - component: {fileID: 250870452}
+  - component: {fileID: 250870454}
+  - component: {fileID: 250870453}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -155,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -66}
+  m_AnchoredPosition: {x: 0, y: -66}
   m_SizeDelta: {x: 712, y: 322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250870450
@@ -239,7 +241,62 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 250870450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250870454}
+        m_TargetAssemblyTypeName: SnowballSmash.MenuAudio, SnowballSmash
+        m_MethodName: onPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &250870453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250870448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 388870010}
+          m_TargetAssemblyTypeName: SnowballSmash.MenuAudio, SnowballSmash
+          m_MethodName: onHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &250870454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250870448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e144fe36e7cec4f83024eceb0988c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverEvent: {fileID: 11400000, guid: 58da89668080c8b4b850e9b39700f91d, type: 2}
+  pressedEvent: {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
 --- !u!1 &388870004
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +309,8 @@ GameObject:
   - component: {fileID: 388870007}
   - component: {fileID: 388870006}
   - component: {fileID: 388870008}
+  - component: {fileID: 388870010}
+  - component: {fileID: 388870009}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -360,7 +419,62 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 388870006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 388870010}
+        m_TargetAssemblyTypeName: SnowballSmash.MenuAudio, SnowballSmash
+        m_MethodName: onPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &388870009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388870004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 388870010}
+          m_TargetAssemblyTypeName: SnowballSmash.MenuAudio, SnowballSmash
+          m_MethodName: onHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &388870010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388870004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e144fe36e7cec4f83024eceb0988c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverEvent: {fileID: 11400000, guid: 58da89668080c8b4b850e9b39700f91d, type: 2}
+  pressedEvent: {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
 --- !u!1 &466074406
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +612,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466074406}
   m_CullTransparentMesh: 1
+--- !u!1 &517247644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517247646}
+  - component: {fileID: 517247645}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &517247645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517247644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 162331359, guid: 185cca1de5fe9184da36f5ffa2232159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterBus: {fileID: 11400000, guid: 92f3bb037838c174ebac3bd4846598d7, type: 2}
+  buses:
+  - {fileID: 11400000, guid: 9c9db18a01a76d34eaf9913b0cfe3298, type: 2}
+  - {fileID: 11400000, guid: 3d65fd9f8d1681f489c68b9e12f7c2f1, type: 2}
+  - {fileID: 11400000, guid: 0018484e143095546b9f7b59be1ea04f, type: 2}
+  masterMixerGroup: {fileID: 24300002, guid: 313005b969533a843969544af0df1017, type: 2}
+  masterVolume: 1
+  muteAll: 0
+  maxRealVoices: 16
+  maxVirtualVoices: 24
+  voiceUpdateInterval: 0.1
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  occlusionUpdateInterval: 0.2
+  occlusionRayCount: 3
+  occlusionRaySpreadMeters: 0.5
+  useBatchedOcclusionRaycasts: 1
+  occlusionMaxHitsPerRay: 4
+  occlusionGainSmoothingSeconds: 0.06
+  occlusionCutoffSmoothingSeconds: 0.04
+  enableLOD: 1
+  lodDistances:
+  - 10
+  - 25
+  - 50
+  - 100
+  voiceMixer: {fileID: 24100000, guid: 313005b969533a843969544af0df1017, type: 2}
+  occlusionLayout: {fileID: 0}
+  defaultOcclusionSlotsPerBus: 6
+  reverbSendBusRegistry: {fileID: 0}
+  reverbSendsUpdateInterval: 0.05
+  warnOnActiveVoiceDestroyed: 1
+--- !u!4 &517247646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517247644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46228057, y: 2.5060835, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &649088221
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -107.972}
+  m_AnchoredPosition: {x: 0, y: -107.971985}
   m_SizeDelta: {x: 0, y: 96.691}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &826833095
@@ -929,6 +1120,7 @@ GameObject:
   - component: {fileID: 978772646}
   - component: {fileID: 978772645}
   - component: {fileID: 978772649}
+  - component: {fileID: 978772650}
   m_Layer: 5
   m_Name: Canvas-MainMenu
   m_TagString: Untagged
@@ -1033,8 +1225,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playBt: {fileID: 388870008}
   quitBt: {fileID: 250870452}
-  gameScene:
-    m_Handle: 0
+--- !u!114 &978772650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978772644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e144fe36e7cec4f83024eceb0988c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverEvent: {fileID: 11400000, guid: 58da89668080c8b4b850e9b39700f91d, type: 2}
+  pressedEvent: {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
 --- !u!1 &1129004013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,3 +1658,4 @@ SceneRoots:
   - {fileID: 893450656}
   - {fileID: 978772648}
   - {fileID: 937878665}
+  - {fileID: 517247646}
