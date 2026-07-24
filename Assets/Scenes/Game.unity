@@ -1917,6 +1917,10 @@ PrefabInstance:
       value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3772771050980037099, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
+      propertyPath: lifeCycleEvents
+      value: 
+      objectReference: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
+    - target: {fileID: 3772771050980037099, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
       propertyPath: 'lanePoints.Array.data[0]'
       value: 
       objectReference: {fileID: 696770167}
@@ -1936,6 +1940,10 @@ PrefabInstance:
       propertyPath: collisionEvents
       value: 
       objectReference: {fileID: 11400000, guid: 2f74afa8add4d6b43918950637b4aa4e, type: 2}
+    - target: {fileID: 5384038532200550996, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
+      propertyPath: lifeCycleEvents
+      value: 
+      objectReference: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
     - target: {fileID: 5384038532200550996, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
       propertyPath: distanceThreshold
       value: 1

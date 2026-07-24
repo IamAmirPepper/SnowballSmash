@@ -12,8 +12,12 @@ namespace SnowballSmash.Gameplay
         
 
         [SerializeField] private float distanceThreshold = 2f;
-        [SerializeField] private SnowballCollisionEvents collisionEvents;
 
+        [Tooltip("Distance from the snowball's centre to an obstacle's collider surface that counts as a hit. Anything further is a near miss.")]
+        [SerializeField] private float hitRadius = 0.5f;
+
+        [SerializeField] private GameLifeCycleEvents lifeCycleEvents;
+        [SerializeField] private SnowballCollisionEvents collisionEvents;
 
         private Collider2D _myCollider;
         private SpriteRenderer _myRenderer;
@@ -29,20 +33,27 @@ namespace SnowballSmash.Gameplay
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+           triggerhandler(collision);
+        }
+
+        private void triggerhandler(Collider2D collision)
+        {
+            if (lifeCycleEvents.hasGameStarted == false) return;
+
             if (collision.TryGetComponent<CollidableBase>(out CollidableBase trueObj))
             {
-                var distance = Vector2.Distance(GetCenterPoint(), trueObj.transform.position);
+                //var distance = Vector2.Distance(GetCenterPoint(), trueObj.transform.position);
+                var distance = Mathf.Abs(trueObj.transform.position.x - GetCenterPoint().x);
 
-
-                if(distance < distanceThreshold)
+                if (distance < distanceThreshold)
                 {
-                    if(collision.TryGetComponent<Target>(out Target target))
+                    if (collision.TryGetComponent<Target>(out Target target))
                     {
                         //Debug.Log("hit target");
                         collisionEvents.RaiseOnCollectHit();
                         impactEvent.Post(gameObject);
                     }
-                    else if(collision.TryGetComponent<Obstacle>(out Obstacle obstacle))
+                    else if (collision.TryGetComponent<Obstacle>(out Obstacle obstacle))
                     {
                         //Debug.Log("hit obstacle");
                         collisionEvents.RaiseOnObstacleHit();
@@ -74,6 +85,46 @@ namespace SnowballSmash.Gameplay
                 }
             }
         }
+
+      /*  private void HandleNearMiss(CollidableBase trueObj, Vector2 myCenter)
+        {
+            collisionEvents.RaiseOnNearMiss();
+
+            float xDiff = trueObj.transform.position.x - myCenter.x;
+            if(xDiff > 0) nearMissRightEvent.Post(gameObject);
+            else nearMissLeftEvent.Post(gameObject);
+        }
+        private void alternateTriggering(Collider2D collision)
+        {
+            if (lifeCycleEvents.hasGameStarted == false) return;
+            if (!collision.TryGetComponent(out CollidableBase trueObj)) return;
+
+
+            if (collision.TryGetComponent<Target>(out Target target))
+            {
+                //Debug.Log("hit target");
+                collisionEvents.RaiseOnCollectHit();
+                impactEvent.Post(gameObject);
+            }
+            else if (collision.TryGetComponent<Obstacle>(out Obstacle obstacle))
+            {
+                //Debug.Log("hit obstacle");
+                collisionEvents.RaiseOnObstacleHit();
+                impactEvent.Post(gameObject);
+            }
+
+
+            Vector2 myCenter = GetCenterPoint();
+
+            float gap = Vector2.Distance(myCenter, collision.ClosestPoint(myCenter));
+
+            if (gap >= hitRadius)
+            {
+                HandleNearMiss(trueObj, myCenter);
+            }
+            //triggerhandler(collision);
+        }*/
+
 
         private Vector2 GetCenterPoint()
         {

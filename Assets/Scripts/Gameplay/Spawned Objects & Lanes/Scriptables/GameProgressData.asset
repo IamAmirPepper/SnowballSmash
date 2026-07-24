@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameProgressData
   m_EditorClassIdentifier: 
   metersPerSpeedStep: 100
-  speedIncreasePerStep: 0.05
+  speedIncreasePerStep: 0.2
   maxSpeedMultiplier: 2

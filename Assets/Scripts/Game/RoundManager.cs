@@ -27,7 +27,7 @@ namespace SnowballSmash
         private void OnEnable()
         {
             collisionEvents.onObstacleHit += OnCollidedWithObstacle;
-            
+            _raiseGameStartRoutine = StartCoroutine(RaiseGameStartedNextFrame());
         }
 
         private void OnDisable()
@@ -44,14 +44,14 @@ namespace SnowballSmash
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K))
+            /*if (Input.GetKeyDown(KeyCode.K))
             {
                 _raiseGameStartRoutine = StartCoroutine(RaiseGameStartedNextFrame());
             }
             if(Input.GetKeyDown(KeyCode.S))
             {
                 OnCollidedWithObstacle();
-            }
+            }*/
         }
 
 
