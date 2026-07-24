@@ -10,6 +10,7 @@ namespace SnowballSmash
         [SerializeField] private GameLifeCycleEvents lifeCycleEvents;
         [SerializeField] private SnowballCollisionEvents collisionEvents;
         [SerializeField] private ScoreManager scoreManager;
+        [SerializeField] private EndGameCanvas endGameCanvas;
 
         private Coroutine _raiseGameStartRoutine;
 
@@ -58,7 +59,9 @@ namespace SnowballSmash
         private IEnumerator RaiseGameStartedNextFrame()
         {
             yield return null;
+            Time.timeScale = 1f;
             lifeCycleEvents.RaiseGameStarted();
+            _raiseGameStartRoutine = null;
         }
 
         private void OnCollidedWithObstacle()
@@ -70,7 +73,16 @@ namespace SnowballSmash
             }
 
             lifeCycleEvents.RaiseGameEnd();
-            // do stuff like raise menu, e.g. ShowGameOverMenu(finalMeters, highScore);
+
+            if (endGameCanvas == null)
+            {
+                endGameCanvas = FindFirstObjectByType<EndGameCanvas>(FindObjectsInactive.Include);
+            }
+
+            if (endGameCanvas != null)
+            {
+                endGameCanvas.Show(scoreManager);
+            }
         }
     }
 }
