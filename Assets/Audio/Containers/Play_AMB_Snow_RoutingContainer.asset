@@ -36,5 +36,5 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 51c5c66628d10834eb22ec374022f8ae, type: 3}
     address: 
   legacyAudioClips: []
-  volume: 1
+  volume: 0.376
   loop: 1
