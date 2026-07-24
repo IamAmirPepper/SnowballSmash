@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca1a42871873aa94fb586dfe5c155a49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb2eba0342447d44a81d07133fed70c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1098,7 +1098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a791a6704363444ca8dcf09dd151d1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
   lanes:
   - spawnPoint: {fileID: 1429873101}
     targetPoint: {fileID: 1429873201}
@@ -1673,7 +1672,7 @@ GameObject:
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1735000001
 Transform:
   m_ObjectHideFlags: 0
@@ -1701,7 +1700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a791a6704363444ca8dcf09dd151d1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
   lanes:
   - spawnPoint: {fileID: 1660651987}
     targetPoint: {fileID: 602872076}
@@ -1845,6 +1843,7 @@ MonoBehaviour:
   lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
   collisionEvents: {fileID: 11400000, guid: 2f74afa8add4d6b43918950637b4aa4e, type: 2}
   scoreManager: {fileID: 505478181}
+  endGameCanvas: {fileID: 0}
 --- !u!4 &2102789608
 Transform:
   m_ObjectHideFlags: 0
