@@ -9,6 +9,7 @@ namespace SnowballSmash
     public class EndGameCanvas : MonoBehaviour
     {
         [SerializeField] private TMP_Text highscoreText;
+        [SerializeField] private TMP_Text currentscoreText;
         [SerializeField] private Button replayButton;
         [SerializeField] private Canvas canvas;
         [SerializeField] private GraphicRaycaster graphicRaycaster;
@@ -53,6 +54,13 @@ namespace SnowballSmash
                 if (highscoreText != null)
                 {
                     highscoreText.text = scoreManager.HighScoreMeters + "m";
+                }
+            }
+            if(scoreManager != null)
+            {
+                if(currentscoreText != null)
+                {
+                    currentscoreText.text = scoreManager.CurrentMeters + "m";
                 }
             }
 

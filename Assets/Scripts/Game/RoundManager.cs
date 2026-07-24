@@ -82,6 +82,8 @@ namespace SnowballSmash
             if (endGameCanvas != null)
             {
                 endGameCanvas.Show(scoreManager);
+                
+
             }
         }
     }
