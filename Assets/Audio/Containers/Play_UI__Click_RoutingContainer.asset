@@ -33,8 +33,8 @@ MonoBehaviour:
   maxDistance: 10
   rolloffMode: 0
   entries:
-  - clip: {fileID: 8300000, guid: 90f8f4c868aac4d4fae5e89714691827, type: 3}
+  - clip: {fileID: 8300000, guid: 44f719f210db18c44b5688c83a7b2190, type: 3}
     address: 
   legacyAudioClips: []
-  volume: 1
+  volume: 0.762
   loop: 0

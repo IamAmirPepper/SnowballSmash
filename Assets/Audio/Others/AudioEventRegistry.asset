@@ -20,4 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7fd0968b2cd05c74d979e8149cd9bf75, type: 2}
   - {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
   - {fileID: 11400000, guid: 58da89668080c8b4b850e9b39700f91d, type: 2}
+  - {fileID: 11400000, guid: b53d617de39912f4199a365ac5dd1207, type: 2}
   audioStates: []

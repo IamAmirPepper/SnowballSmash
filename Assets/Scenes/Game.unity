@@ -218,6 +218,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953952576}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SnowballSmash.MenuAudio, SnowballSmash
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259949672105934689, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3465656588000492842, guid: 47d675266199b354ca0249bf363cd902, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -313,7 +341,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6458980464012005392, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1953952577}
+    - targetCorrespondingSourceObject: {fileID: 6458980464012005392, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1953952576}
   m_SourcePrefab: {fileID: 100100000, guid: 47d675266199b354ca0249bf363cd902, type: 3}
 --- !u!114 &90679956 stripped
 MonoBehaviour:
@@ -578,7 +612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &349417639
 Transform:
   m_ObjectHideFlags: 0
@@ -601,7 +635,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349417637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5c263f92de7cc240a4034a17a14ab99, type: 3}
   m_Name: 
@@ -1974,6 +2008,54 @@ Transform:
   - {fileID: 696770167}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1953952571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6458980464012005392, guid: 47d675266199b354ca0249bf363cd902, type: 3}
+  m_PrefabInstance: {fileID: 90679955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1953952576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953952571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e144fe36e7cec4f83024eceb0988c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverEvent: {fileID: 11400000, guid: 58da89668080c8b4b850e9b39700f91d, type: 2}
+  pressedEvent: {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
+--- !u!114 &1953952577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953952571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1953952576}
+          m_TargetAssemblyTypeName: SnowballSmash.MenuAudio, SnowballSmash
+          m_MethodName: onHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1984542715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,7 +2211,7 @@ PrefabInstance:
     - target: {fileID: 5384038532200550996, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
       propertyPath: impactEvent
       value: 
-      objectReference: {fileID: 11400000, guid: 2e176bdedc208fb4a9b847280d4ca436, type: 2}
+      objectReference: {fileID: 11400000, guid: b53d617de39912f4199a365ac5dd1207, type: 2}
     - target: {fileID: 5384038532200550996, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
       propertyPath: collisionEvents
       value: 

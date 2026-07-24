@@ -63,9 +63,9 @@ MonoBehaviour:
   preferences:
     addPrefixByDefault: 1
     moveToLibraryByDefault: 0
-    showProcessed: 1
+    showProcessed: 0
     showUnprocessed: 1
-    lastSelectedCategory: 4
+    lastSelectedCategory: 0
     lastScanPath: 
     previewVolume: 1
     autoPreview: 0
