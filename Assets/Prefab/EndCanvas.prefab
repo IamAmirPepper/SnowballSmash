@@ -49,7 +49,7 @@ Canvas:
   m_GameObject: {fileID: 3195968388148438164}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d71f9fef6ab4bd48b3f72677d326b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
   highscoreText: {fileID: 5988290424619749711}
   replayButton: {fileID: 3259949672105934689}
   canvas: {fileID: 7999689875501011326}

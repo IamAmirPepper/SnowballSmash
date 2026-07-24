@@ -558,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1154230496}
   metersPerSecond: 7
-  highScoreText: {fileID: 1154230496}
+  highScoreText: {fileID: 0}
   gameProgress: {fileID: 11400000, guid: 5f6113b67c4fea24684b05328f1a7cb3, type: 2}
   lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
 --- !u!4 &505478182
@@ -1195,6 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a791a6704363444ca8dcf09dd151d1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
   lanes:
   - spawnPoint: {fileID: 1429873101}
     targetPoint: {fileID: 1429873201}
@@ -1797,6 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a791a6704363444ca8dcf09dd151d1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeCycleEvents: {fileID: 0}
   lanes:
   - spawnPoint: {fileID: 1660651987}
     targetPoint: {fileID: 602872076}
@@ -2012,6 +2014,10 @@ PrefabInstance:
       propertyPath: sideLaneScale
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3772771050980037099, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
+      propertyPath: lifeCycleEvents
+      value: 
+      objectReference: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
     - target: {fileID: 3772771050980037099, guid: ebaa18a93ccb11b45864c5eb18aeab2e, type: 3}
       propertyPath: 'lanePoints.Array.data[0]'
       value: 
