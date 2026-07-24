@@ -42,6 +42,7 @@ namespace SnowballSmash.Gameplay
         private float scaleVelocity;
         private float currentScaleMultiplier;
         private float targetPathPosition;
+        private bool isPlaying;
 
         /// <summary>
         /// Captures the authored player scale and resolves the starting path position.
@@ -62,14 +63,52 @@ namespace SnowballSmash.Gameplay
             SnapToPathPosition(targetPathPosition);
         }
 
+        private void OnEnable()
+        {
+            if (lifeCycleEvents == null)
+            {
+                isPlaying = true;
+                return;
+            }
+
+            lifeCycleEvents.onGameStart += HandleGameStart;
+            lifeCycleEvents.onGameEnd += HandleGameEnd;
+            isPlaying = lifeCycleEvents.hasGameStarted;
+        }
+
+        private void OnDisable()
+        {
+            if (lifeCycleEvents == null)
+            {
+                return;
+            }
+
+            lifeCycleEvents.onGameStart -= HandleGameStart;
+            lifeCycleEvents.onGameEnd -= HandleGameEnd;
+        }
+
         /// <summary>
         /// Reads mouse input and follows the requested lane path position.
         /// </summary>
         private void Update()
         {
-            if (lifeCycleEvents.hasGameStarted == false) return;
+            if (!isPlaying)
+            {
+                return;
+            }
+
             UpdateMouseTarget();
             FollowTarget();
+        }
+
+        private void HandleGameStart()
+        {
+            isPlaying = true;
+        }
+
+        private void HandleGameEnd()
+        {
+            isPlaying = false;
         }
 
         /// <summary>

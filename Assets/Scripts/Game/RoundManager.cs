@@ -28,7 +28,7 @@ namespace SnowballSmash
         private void OnEnable()
         {
             collisionEvents.onObstacleHit += OnCollidedWithObstacle;
-            
+            _raiseGameStartRoutine = StartCoroutine(RaiseGameStartedNextFrame());
         }
 
         private void OnDisable()
@@ -59,7 +59,9 @@ namespace SnowballSmash
         private IEnumerator RaiseGameStartedNextFrame()
         {
             yield return null;
+            Time.timeScale = 1f;
             lifeCycleEvents.RaiseGameStarted();
+            _raiseGameStartRoutine = null;
         }
 
         private void OnCollidedWithObstacle()

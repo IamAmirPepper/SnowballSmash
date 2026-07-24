@@ -14,14 +14,14 @@ namespace SnowballSmash.Events
 
         public void RaiseGameStarted()
         {
-            onGameStart?.Invoke();
             hasGameStarted = true;
+            onGameStart?.Invoke();
         }
         public void RaiseGamePaused() => onGamePause?.Invoke();
         public void RaiseGameEnd()
-        { 
-            onGameEnd?.Invoke();
+        {
             hasGameStarted = false;
+            onGameEnd?.Invoke();
         } 
     }
 }
