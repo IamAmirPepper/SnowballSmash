@@ -10,8 +10,18 @@ namespace SnowballSmash.Events
         public event Action onGamePause;
         public event Action onGameEnd;
 
-        public void RaiseGameStarted() => onGameStart?.Invoke();
+        public bool hasGameStarted { get; private set; }
+
+        public void RaiseGameStarted()
+        {
+            onGameStart?.Invoke();
+            hasGameStarted = true;
+        }
         public void RaiseGamePaused() => onGamePause?.Invoke();
-        public void RaiseGameEnd() => onGameEnd?.Invoke();
+        public void RaiseGameEnd()
+        { 
+            onGameEnd?.Invoke();
+            hasGameStarted = false;
+        } 
     }
 }

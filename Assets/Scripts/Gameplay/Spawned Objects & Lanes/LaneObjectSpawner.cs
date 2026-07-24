@@ -13,6 +13,8 @@ namespace SnowballSmash.Gameplay
     {
         private const float SpawnTickSeconds = 0.05f;
 
+        [SerializeField] private GameLifeCycleEvents lifeCycleEvents;
+
         [Header("Spawning")]
         [Tooltip("Lane definitions used by this spawner. Each lane needs a spawn point and optional target point.")]
         [SerializeField] private SpawnLane[] lanes = new SpawnLane[3];
@@ -65,16 +67,49 @@ namespace SnowballSmash.Gameplay
         /// </summary>
         private void OnEnable()
         {
-            routineCancellation = new CancellationTokenSource();
-            ResetLaneTimers();
-            spawnRoutine = StartCoroutine(SpawnRoutine(routineCancellation.Token));
-            travelRoutine = StartCoroutine(TravelRoutine(routineCancellation.Token));
+            lifeCycleEvents.onGameStart += OnRoundStart;
+            lifeCycleEvents.onGameEnd += OnRoundEnd;
         }
 
         /// <summary>
         /// Cancels active routines and stops any running coroutine handles.
         /// </summary>
         private void OnDisable()
+        {
+            lifeCycleEvents.onGameStart -= OnRoundStart;
+            lifeCycleEvents.onGameEnd -= OnRoundEnd;
+
+            routineCancellation?.Cancel();
+
+            if (spawnRoutine != null)
+            {
+                StopCoroutine(spawnRoutine);
+            }
+
+            if (travelRoutine != null)
+            {
+                StopCoroutine(travelRoutine);
+            }
+
+            routineCancellation?.Dispose();
+            routineCancellation = null;
+        }
+
+
+        private void OnRoundStart()
+        {
+            //spawnTickWait = new WaitForSeconds(SpawnTickSeconds);
+            //PreloadPool();
+
+            FlushActiveObjects();
+
+            routineCancellation = new CancellationTokenSource();
+            ResetLaneTimers();
+            spawnRoutine = StartCoroutine(SpawnRoutine(routineCancellation.Token));
+            travelRoutine = StartCoroutine(TravelRoutine(routineCancellation.Token));
+        }
+
+        private void OnRoundEnd()
         {
             routineCancellation?.Cancel();
 
@@ -90,6 +125,20 @@ namespace SnowballSmash.Gameplay
 
             routineCancellation?.Dispose();
             routineCancellation = null;
+        }
+
+        private void FlushActiveObjects()
+        {
+            for (int i = activeObjects.Count - 1; i >= 0; i--)
+            {
+                GameObject instance = activeObjects[i].gameObject;
+                if (instance != null)
+                {
+                    pool.Return(instance, poolParent);
+                }
+            }
+
+            activeObjects.Clear();
         }
 
         /// <summary>

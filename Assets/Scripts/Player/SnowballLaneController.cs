@@ -1,3 +1,4 @@
+using SnowballSmash.Events;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,6 +9,9 @@ namespace SnowballSmash.Gameplay
     /// </summary>
     public class SnowballLaneController : MonoBehaviour
     {
+
+        [SerializeField] private GameLifeCycleEvents lifeCycleEvents;
+
         [Header("Lanes")]
         [Tooltip("Ordered player path anchors from left to right.")]
         [SerializeField] private Transform[] lanePoints = new Transform[3];
@@ -63,6 +67,7 @@ namespace SnowballSmash.Gameplay
         /// </summary>
         private void Update()
         {
+            if (lifeCycleEvents.hasGameStarted == false) return;
             UpdateMouseTarget();
             FollowTarget();
         }
