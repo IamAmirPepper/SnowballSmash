@@ -27,7 +27,7 @@ namespace SnowballSmash
         private void OnEnable()
         {
             collisionEvents.onObstacleHit += OnCollidedWithObstacle;
-            _raiseGameStartRoutine = StartCoroutine(RaiseGameStartedNextFrame());
+            
         }
 
         private void OnDisable()
@@ -42,6 +42,18 @@ namespace SnowballSmash
         }
 
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                _raiseGameStartRoutine = StartCoroutine(RaiseGameStartedNextFrame());
+            }
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                OnCollidedWithObstacle();
+            }
+        }
+
 
         private IEnumerator RaiseGameStartedNextFrame()
         {
@@ -51,9 +63,13 @@ namespace SnowballSmash
 
         private void OnCollidedWithObstacle()
         {
+            if (_raiseGameStartRoutine != null)
+            {
+                StopCoroutine(_raiseGameStartRoutine);
+                _raiseGameStartRoutine = null;
+            }
+
             lifeCycleEvents.RaiseGameEnd();
-
-
             // do stuff like raise menu, e.g. ShowGameOverMenu(finalMeters, highScore);
         }
     }

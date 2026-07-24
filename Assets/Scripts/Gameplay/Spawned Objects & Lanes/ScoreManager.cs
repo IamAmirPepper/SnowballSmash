@@ -56,9 +56,9 @@ namespace SnowballSmash.Gameplay
         /// </summary>
         private void Awake()
         {
-            _highScoreMeters = PlayerPrefs.GetInt(HighScoreKey, 0);
-            UpdateHighScoreText();
+
         }
+
 
         /// <summary>
         /// Subscribes to round lifecycle events.
@@ -85,6 +85,10 @@ namespace SnowballSmash.Gameplay
         /// </summary>
         private void HandleGameStart()
         {
+            _highScoreMeters = PlayerPrefs.GetInt(HighScoreKey, 0);
+            UpdateHighScoreText();
+
+
             _elapsedTime = 0f;
             _currentMeters = 0;
             UpdateScoreText();

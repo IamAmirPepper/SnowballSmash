@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a791a6704363444ca8dcf09dd151d1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
   lanes:
   - spawnPoint: {fileID: 1429873101}
     targetPoint: {fileID: 1429873201}
@@ -1700,6 +1701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a791a6704363444ca8dcf09dd151d1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeCycleEvents: {fileID: 11400000, guid: 33b26dae3b15b554eb0161854b881335, type: 2}
   lanes:
   - spawnPoint: {fileID: 1660651987}
     targetPoint: {fileID: 602872076}
