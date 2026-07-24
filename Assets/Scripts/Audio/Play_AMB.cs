@@ -30,6 +30,9 @@ namespace SnowballSmash
         {
             lifeCycleEvents.onGameStart -= OnStartRound;
             lifeCycleEvents.onGameEnd -= OnEndRound;
+
+            StopSnow();
+            StopWind();
         }
 
         // Idempotent — safe to call on round 1, 2, 50. No _firstTime, no recursion.
